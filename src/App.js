@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./Header";
+import { MoviesContainer } from "./moviesContainer";
+import MenuBar from "./MenuBar";
+import WelcomePage from "./WelcomePage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: "welcome"
+    };
+
+    this.changePage = this.changePage.bind(this);
+  }
+
+  changePage(pageName) {
+    console.log(123);
+    this.setState({ currentPage: pageName });
+  }
+
+  render() {
+    if (this.state.currentPage === "welcome") {
+      return <WelcomePage changePage={this.changePage} />;
+    } else {
+      return (
+        <div className="App">
+          <Header name="Movie App" />
+          <MoviesContainer />
+          <MenuBar />
+        </div>
+      );
+    }
+  }
 }
 
 export default App;

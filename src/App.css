@@ -1,33 +1,71 @@
 .App {
   text-align: center;
+  font-style: italic;
+  font-weight: 500;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: peru;
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.movie {
+  border: whitesmoke solid 2px;
+  height: 250px;
+  margin: 10px;
+  width: 250px;
+  background-color: blanchedalmond;
+  color: peru;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.star-Rating {
+  width: 250px;
+  border: whitesmoke solid 2px;
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30px;
+  align-content: center;
+}
+.stars {
+  color: blue;
+}
+.movie-Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.selected {
+  color: blue;
+  size: 35px;
+}
+.not-selected {
+  color: peru;
+  size: 35px;
+}
+.button {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.welcome {
+  display: flex;
+  flex-grow: 1;
 }
